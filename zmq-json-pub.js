@@ -27,13 +27,12 @@ ZmqJsonPub.prototype.publish = function (endpoint) {
     });
 };
 
-ZmqJsonPub.prototype.send = function (message) {
-    if (!message) {
+ZmqJsonPub.prototype.send = function (data) {
+    if (!data) {
         console.error("send called with no message specified");
         return false;
     }
-    // this.pub.send(JSON.stringify(spec.message));
-    this.pub.send(message);
+    this.pub.send(JSON.stringify(data));
     return true;
 };
 
