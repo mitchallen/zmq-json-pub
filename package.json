@@ -10,6 +10,10 @@
     "test-debug": "nodemon /usr/local/bin/mocha -g '@DEBUG' --recursive --timeout 20000",
     "test-jenkins": "mocha --recursive --timeout 20000 -R xunit test/ > test-reports.xml"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://bitbucket.org/mitchallen/zmq-json-pub.git"
+  },
   "author": "Mitch Allen <npm@mitchallen.com> (http://mitchallen.com)",
   "license": "ISC",
   "dependencies": {

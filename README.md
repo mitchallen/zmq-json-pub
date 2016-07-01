@@ -8,8 +8,6 @@ A node.js module for publishing JSON messages for subscribeer via 0MQ (ZeroMQ)
 
 On a Mac:
 
-* Open up a Terminal window
-
     $ brew install zmq
 
 To verify the installation type: man zmq
@@ -39,4 +37,3 @@ sudo npm install -g mocha
 usage: See scripts/test in package.json
 
 sudo npm install -g nodemon
-Usage: See scripts/test in package.jsob
