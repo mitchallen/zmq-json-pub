@@ -26,12 +26,12 @@ function heartbeat() {
     if (result) {
         console.log("heartbeat sent at " + new Date(data.timestamp));
     } else {
-        console.error("error sending message");
+        console.error("error sending heartbeat");
     }  
     setTimeout(heartbeat, config.interval); 
 }
 
-console.log("Sending hearbeat every " + config.interval / 1000 + " seconds")
+console.log("Sending heartbeat every " + config.interval / 1000 + " seconds")
 
 heartbeat();
 

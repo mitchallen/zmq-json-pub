@@ -9,6 +9,7 @@ A node.js module for publishing JSON messages for subscribeer via 0MQ (ZeroMQ)
 On a Mac:
 
 * Open up a Terminal window
+
     $ brew install zmq
 
 To verify the installation type: man zmq
