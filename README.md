@@ -1,8 +1,8 @@
 zmq-json-pub.js
 ================
 
-A node.js module for publishing JSON messages for subscribeer via 0MQ (ZeroMQ)
-------------------------------------------------------------------------------
+A node.js module for publishing JSON messages via 0MQ (ZeroMQ)
+--------------------------------------------------------------
 
 ## Install 0MQ
 
@@ -10,30 +10,62 @@ On a Mac:
 
     $ brew install zmq
 
-To verify the installation type: man zmq
+To verify the installation
 
-## Install zmq-json-pub
+    $ man zmq
+
+ See [__zeromq.org__](http://zeromq.org)
+
+## Install zmq-json-pub in your project
 
     $ npm init
     $ npm install zmq-json-pub --save
 
 
-## Usage
+## Tests
 
+Tests assume that __mocha__ has been installed globally.  If not execute the following:
 
+    $ npm install -g mocha
 
-## Developing
+Run the tests *from the projects root folder* in one of the following ways:
 
-This section is for those modifying the original package only
+    $ mocha --recursive --timeout 20000
+    
+Or
 
-After cloning from npm, type: npm update
+    $ npm test
+    
+Or if you feel like kickin' it old skool:
 
-Make sure the following developer tools are installed:
+    make test
 
-sudo npm install -g jslint
-usage: jslint zmq-envoy.js
+### Testing by Version
 
-sudo npm install -g mocha
-usage: See scripts/test in package.json
+To run the tests for each version (currently there is only one version (v0001):
 
-sudo npm install -g nodemon
+    $ mocha --timeout 5000 --recursive test/v0001/*test.js
+
+The tests generate log files in a logs/ folder under the projects root folder.
+
+* * *
+
+## Repo(s)
+
+* [bitbucket.org/mitchallen/zmq-json-pub.git](https://bitbucket.org/mitchallen/zmq-json-pub.git)
+
+* * *
+
+## Contributing
+
+In lieu of a formal style guide, take care to maintain the existing coding style.
+Add unit tests for any new or changed functionality. Lint and test your code.
+
+* * *
+
+## Version History
+
+#### Version 0.1.0 release notes
+
+* Initial release
+
