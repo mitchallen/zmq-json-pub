@@ -13,6 +13,7 @@ var request = require('supertest'),
 describe('send suite ' + config.versionLabel, function () {
     before(function () {
         pub = new ZmqJsonPub();
+        pub.verbose = config.verbose; 
         pub.publish(publisher.endpoint);
     });
     it('should send message', function (done) {
@@ -20,7 +21,7 @@ describe('send suite ' + config.versionLabel, function () {
         result.should.eql(true);
         done(); // Required or test will timeout
     });
-    it('should not send an message with no message', function (done) {
+    it('should not send a message with no body', function (done) {
         let result = pub.send();
         result.should.eql(false);
         done(); // Required or test will timeout
