@@ -1,13 +1,22 @@
-# zmq-json-pub
+zmq-json-pub.js
+================
 
-## Developer Setup
+A node.js module for publishing JSON messages for subscribeer via 0MQ (ZeroMQ)
+------------------------------------------------------------------------------
+
+## Install 0MQ
 
 On a Mac:
 
-* Open up a Terminal Window
-* Type: brew install zmq
+* Open up a Terminal window
+    $ brew install zmq
 
 To verify the installation type: man zmq
+
+## Install zmq-json-pub
+
+    $ npm init
+    $ npm install zmq-json-pub --save
 
 
 ## Usage
