@@ -17,19 +17,22 @@ module.exports = ZmqJsonPub;
 
 ZmqJsonPub.prototype.verbose = false;
 
-ZmqJsonPub.prototype.publish = function (endpoint) {
-    // var verbose = this.verbose;
-    this.pub.bind(endpoint, function (err) {
-        if (this.verbose) {
-            console.log(
-                'Listening for zmq subscribers on ',
-                endpoint
-            );
-        }
-        if (err) {
-            console.error(err);
-        }
-    }.bind(this));
+ZmqJsonPub.prototype.publish = function (endpoint, fn) {
+    if (fn) {
+        this.pub.bind(endpoint, fn);
+    } else {
+        this.pub.bind(endpoint, function (err) {
+            if (this.verbose) {
+                console.log(
+                    'Listening for zmq subscribers on ',
+                    endpoint
+                );
+            }
+            if (err) {
+                console.error(err);
+            }
+        }.bind(this));
+    }
 };
 
 ZmqJsonPub.prototype.send = function (data) {
