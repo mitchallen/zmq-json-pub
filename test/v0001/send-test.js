@@ -17,14 +17,21 @@ describe('send suite ' + config.versionLabel, function () {
         pub.publish(publisher.endpoint);
     });
     it('should send message', function (done) {
-        let result = pub.send('message one');
-        result.should.eql(true);
-        done(); // Required or test will timeout
+        pub.send('message one');
+        done(); 
     });
     it('should not send a message with no body', function (done) {
-        let result = pub.send();
-        result.should.eql(false);
-        done(); // Required or test will timeout
+        pub.send();
+        done(); 
+    });
+    it('should call error callback if no body', function (done) {
+        var caughtError = false;
+        pub.send(null, function(err) {
+            caughtError = true;
+            console.error(err);
+        });
+        caughtError.should.eql(true);
+        done(); 
     });
     after(function () {
         pub.close();

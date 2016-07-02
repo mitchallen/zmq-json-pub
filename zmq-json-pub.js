@@ -35,15 +35,14 @@ ZmqJsonPub.prototype.publish = function (endpoint, callback) {
     }
 };
 
-ZmqJsonPub.prototype.send = function (data) {
+ZmqJsonPub.prototype.send = function (data, callback) {
     if (!data) {
-        if (this.verbose) {
-            console.error("send called with no body specified");
+        if (callback  && typeof callback === "function") {
+            callback(new Error("send called with no body specified"));
         }
-        return false;
+        return;
     }
     this.pub.send(JSON.stringify(data));
-    return true;
 };
 
 ZmqJsonPub.prototype.close = function () {
