@@ -23,7 +23,7 @@ To verify the installation
 
 ## Usage 
 
-The complete project can be found in the __examples/demo___ folder.
+The complete project can be found in the __examples/demo__ folder.
 
 This example shows how to create a simple app that publishes a heartbeat JSOM message every 3 seconds.  The example JSON is completely arbitrary. You can specify your own JSON format.
 
