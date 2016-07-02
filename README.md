@@ -25,7 +25,7 @@ To verify the installation
 
 The complete project can be found in the __examples/demo__ folder.
 
-This example shows how to create a simple app that publishes a heartbeat JSOM message every 3 seconds.  The example JSON is completely arbitrary. You can specify your own JSON format.
+This example shows how to create a simple app that publishes a heartbeat JSON message every 3 seconds.  The example JSON is completely arbitrary. You can specify your own JSON format.
 
 File: __examples/demo/config.js__
 
