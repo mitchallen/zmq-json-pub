@@ -100,7 +100,7 @@ To stop press __Ctrl-C__.
 
 ## Companion Project
 
-For an example of how to subscrine to JSON messages see the companion project:
+For an example of how to subscribe to JSON messages see the companion project:
 
 [https://www.npmjs.com/package/zmq-json-sub](https://www.npmjs.com/package/zmq-json-sub)
 
