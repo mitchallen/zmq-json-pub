@@ -17,9 +17,9 @@ module.exports = ZmqJsonPub;
 
 ZmqJsonPub.prototype.verbose = false;
 
-ZmqJsonPub.prototype.publish = function (endpoint, fn) {
-    if (fn) {
-        this.pub.bind(endpoint, fn);
+ZmqJsonPub.prototype.publish = function (endpoint, callback) {
+    if (callback  && typeof(callback) === "function" ) {
+        this.pub.bind(endpoint, callback);
     } else {
         this.pub.bind(endpoint, function (err) {
             if (this.verbose) {
