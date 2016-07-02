@@ -31,7 +31,6 @@ File: __examples/demo/config.js__
 
     var config = {};
     config.endpoint = "tcp://*:5431";
-    config.verbose = true;
     config.interval = 3000;    // micro seconds
     module.exports = config;
 
@@ -141,6 +140,10 @@ Add unit tests for any new or changed functionality. Lint and test your code.
 * * *
 
 ## Version History
+
+#### Version 0.1.1 release notes
+
+* Updated example to use published module
 
 #### Version 0.1.0 release notes
 
