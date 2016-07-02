@@ -25,7 +25,7 @@ To verify the installation
 
 Usage example:
 
-File: __examples/demo/config.js
+File: __examples/demo/config.js__
 
 
     var config = {};
@@ -34,7 +34,7 @@ File: __examples/demo/config.js
     config.interval = 3000;    // micros seconds
     module.exports = config;
 
-File: __examples/demo/index.js
+File: __examples/demo/index.js__
 
 	"use strict";
 
