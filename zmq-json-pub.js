@@ -15,6 +15,8 @@ function ZmqJsonPub() {
 
 module.exports = ZmqJsonPub;
 
+ZmqJsonPub.prototype.sendDelay = 1000;  // micro seconds
+
 ZmqJsonPub.prototype.publish = function (endpoint, callback) {
     if (callback  && typeof callback === "function") {
         this.pub.bind(endpoint, callback);
@@ -40,7 +42,9 @@ ZmqJsonPub.prototype.send = function (data, callback) {
         }
         return;
     }
-    this.pub.send(JSON.stringify(data));
+    setTimeout(function () {
+        this.pub.send(JSON.stringify(data));
+    }.bind(this), this.sendDelay);
 };
 
 ZmqJsonPub.prototype.close = function () {

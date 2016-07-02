@@ -13,12 +13,14 @@ var request = require('supertest'),
 describe('send suite ' + config.versionLabel, function () {
     before(function () {
         pub = new ZmqJsonPub();
-        pub.verbose = config.verbose; 
+        pub.sendDelay = publisher.sendDelay; 
         pub.publish(publisher.endpoint);
     });
     it('should send message', function (done) {
         pub.send('message one');
-        done(); 
+        setTimeout(function () {
+            done(); 
+        }, publisher.sendDelay );
     });
     it('should not send a message with no body', function (done) {
         pub.send();
