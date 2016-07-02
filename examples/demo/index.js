@@ -4,9 +4,7 @@
 
 "use strict";
 
-// TODO - update require when project is live
-
-var ZmqJsonPub = require('../../zmq-json-pub'),
+var ZmqJsonPub = require('zmq-json-pub'),
     config = require('./config'),
     pub = new ZmqJsonPub();
 
