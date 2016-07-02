@@ -98,6 +98,12 @@ To run:
 
 To stop press __Ctrl-C__.
 
+## Companion Project
+
+For an example of how to subscrine to JSON messages see the companion project:
+
+[https://www.npmjs.com/package/zmq-json-sub](https://www.npmjs.com/package/zmq-json-sub)
+
 ## Tests
 
 Tests assume that __mocha__ has been installed globally.  If not execute the following:
