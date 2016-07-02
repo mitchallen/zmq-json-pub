@@ -15,8 +15,6 @@ function ZmqJsonPub() {
 
 module.exports = ZmqJsonPub;
 
-ZmqJsonPub.prototype.verbose = false;
-
 ZmqJsonPub.prototype.publish = function (endpoint, callback) {
     if (callback  && typeof callback === "function") {
         this.pub.bind(endpoint, callback);
