@@ -39,8 +39,8 @@ File: __examples/demo/index.js__
 	"use strict";
 
 	var ZmqJsonPub = require('zmq-json-pub'),
-    config = require('./config'),
-    pub = new ZmqJsonPub();
+    	config = require('./config'),
+    	pub = new ZmqJsonPub();
 
 	pub.publish(config.endpoint);
 
