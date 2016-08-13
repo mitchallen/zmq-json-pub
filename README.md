@@ -135,6 +135,7 @@ The tests generate log files in a logs/ folder under the projects root folder.
 ## Repo(s)
 
 * [bitbucket.org/mitchallen/zmq-json-pub.git](https://bitbucket.org/mitchallen/zmq-json-pub.git)
+* [github.com/mitchallen/zmq-json-pub.git](https://github.com/mitchallen/zmq-json-pub.git)
 
 * * *
 
